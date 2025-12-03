@@ -4,7 +4,7 @@ pipeline{
         stage('Build') {
             steps {
                 echo 'Building the Docker image..'
-                sh 'docker build -t sample:latest .'
+                sh 'docker build -t mypythonapp:latest .'
             }
         }
         stage('Docker login') {
@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Push') {
             steps {
-                sh 'docker tag sample:latest vrindhabaswa/sample:latest'
+                sh 'docker tag mypythonapp:latest vrindhabaswa/sample:latest'
                 sh 'docker push vrindhabaswa/sample:latest'
             }
         }
