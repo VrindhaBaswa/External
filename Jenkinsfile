@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Docker login') {
             steps {
-                sh 'docker login -u vrindhabas -p vrindha000'
+                sh 'docker login -u vrindhabaswa -p vrindha000'
             }
         }
         stage('Push') {
